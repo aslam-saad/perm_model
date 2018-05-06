@@ -74,8 +74,8 @@ permDataTrans %>%
 
 ### Pre-process the predictors data
 
-**Explore the predictors distribution** 
-*But due to very large number of predictors, we explore a random sample from the predictors*
+**Explore the predictors distribution**
+But due to very large number of predictors, we explore a random sample from the predictors
 
 ``` r
 set.seed(6)
@@ -91,8 +91,8 @@ fingData[, sample(1:ncol(fingData), 8)] %>%
 ![](pred_modeling_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 
-**missing values** 
-*calculate number of missing values for each predictor, and print top ten*
+**missing values**
+calculate number of missing values for each predictor, and print top ten
 
 ``` r
 sum.na <- function(inpt) {
@@ -134,7 +134,7 @@ fingData[, sample(1:ncol(fingData), 45)] %>%
 ```
 
 <img src="pred_modeling_files/figure-markdown_github/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /> 
-*As noticed, there's significant relation between predictors,* 
+*As noticed, there's significant relation between predictors,*
 *so we may need to perform models that not affected by these characteristics*
 
 ------------------------------------------------------------------------
