@@ -75,6 +75,7 @@ permDataTrans %>%
 ### Pre-process the predictors data
 
 **Explore the predictors distribution**
+
 But due to very large number of predictors, we explore a random sample from the predictors
 
 ``` r
@@ -92,6 +93,7 @@ fingData[, sample(1:ncol(fingData), 8)] %>%
 
 
 **missing values**
+
 calculate number of missing values for each predictor, and print top ten
 
 ``` r
@@ -134,8 +136,9 @@ fingData[, sample(1:ncol(fingData), 45)] %>%
 ```
 
 <img src="pred_modeling_files/figure-markdown_github/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /> 
-*As noticed, there's significant relation between predictors,*
-*so we may need to perform models that not affected by these characteristics*
+
+*As noticed, there's significant relation between predictors, so we may need to perform models that not affected by these characteristics*
+
 
 ------------------------------------------------------------------------
 
@@ -296,6 +299,7 @@ ggplot(data = NULL,
 ```
 
 <img src="pred_modeling_files/figure-markdown_github/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+
 *Note: The near-to linear relation between observed and predicted values indecates that the model works well*
 
 
@@ -310,6 +314,7 @@ ggplot(data = NULL, aes(x = predict(enetFit), y = resid(enetFit)))+
 ```
 
 <img src="pred_modeling_files/figure-markdown_github/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
+
 *Note: The random cloud of points around zero with respect to y-axis with no outliers indicates that there's no missing features to capture*
 
 Part 6: Controlling response
